@@ -1,5 +1,5 @@
 package com.pluralsight;
-
+import java.time.*;
 public class Employee {
     //fields
     private int employeeId;
@@ -7,6 +7,9 @@ public class Employee {
     private String department;
     private double payRate;
     private double hoursWorked;
+
+   private double timeIn;
+   private double timeOut;
 
     //getters
 
@@ -22,4 +25,12 @@ public class Employee {
     public double getRegularHours(){
         return hoursWorked;
     }
+
+    public void punchIn(double time){
+         timeIn = time;
+    }
+    public void punchOut(double time){
+        timeOut = time;
+    }
+
 }
