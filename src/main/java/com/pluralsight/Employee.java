@@ -7,6 +7,7 @@ public class Employee {
     private String department;
     private double payRate;
     private double hoursWorked;
+    private LocalTime currentTime = LocalTime.now();
 
    private double timeIn;
    private double timeOut;
@@ -29,8 +30,13 @@ public class Employee {
     public void punchIn(double time){
          timeIn = time;
     }
+    public void punchIn(LocalTime current){
+        currentTime = current;
+    }
     public void punchOut(double time){
         timeOut = time;
     }
-
+    public void punchOut(LocalTime current){
+        currentTime = current;
+    }
 }
